@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Personnes"
+        android:textColor="@color/purple_700"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,11 +21,48 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/personnes_rv"
         android:layout_width="409dp"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="8dp"
         android:layout_marginRight="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/personnes_titre" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personnes_rv">
+
+        <EditText
+            android:id="@+id/personne_txt_nom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nom"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/personne_txt_date_naissance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Date de naissance (yyyy-mm-dd)"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Ajouter"
+            android:text="Ajouter" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
